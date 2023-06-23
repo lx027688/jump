@@ -1,0 +1,54 @@
+html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>0ono0</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #f8f8f8;
+text-align: center;
+}
+
+h1 {
+color: #333;
+margin-top: 200px;
+}
+
+p {
+font-size: 16px;
+color: #666;
+}
+
+.countdown {
+font-size: 24px;
+color: #999;
+margin: 20px 0;
+}
+</style>
+</head>
+<body>
+<h1>网站已迁移至新域名</h1>
+<p>请稍等，即将自动跳转至新网址：<a href="www.0ono0.cn" style="text-decoration : none;color:#409EFF;font-weight:bold;">www.0ono0.cn</a></p>
+<p class="countdown" id="countdown">5</p>
+
+<script>
+// 倒计时跳转
+var countdownElement = document.getElementById('countdown');
+var countdown = 5;
+
+function updateCountdown() {
+if (countdown > 0) {
+	countdown--;
+}
+countdownElement.innerText = countdown;
+if (countdown === 0) {
+window.location.href = 'http://www.0ono0.cn';
+}
+}
+
+ setInterval(updateCountdown, 1000);
+</script>
+</body>
+</html>
